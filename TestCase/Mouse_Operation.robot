@@ -28,3 +28,14 @@ Right Click Action
     open context menu    xpath://div[@id='droppable']
     sleep    2
 
+#Mouse Method In Robot
+#    double click element
+#    drag and drop
+#    drag and drop by offset
+#    mouse over
+#    mouse down
+#    mouse down on image
+#    mouse down on link
+#    mouse out
+#    mouse up
+

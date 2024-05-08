@@ -27,7 +27,8 @@ Scrolling page
     capture page screenshot    D:/CREDENCE CLASS/AUTOMATION/Robot/ScreenShots/scroll_to_start.png
 
 
-
+#Scrolling page Method In Robot
+#        scroll element into view
 
 
 

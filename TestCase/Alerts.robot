@@ -22,3 +22,8 @@ Alert Handles
     click element    xpath://button[@name='promptalertbox1234']
     handle alert    accept
 
+#Alert Methods In Robot
+#        alert should be present
+#        alert should not be present
+#        handle alert
+#        input text into alert

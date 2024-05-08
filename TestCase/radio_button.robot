@@ -20,10 +20,18 @@ Test_Radio_button
     unselect checkbox       checkBoxOption1
     close browser
 
-
-
-
-
-*** Keywords ***
+#Click Radio Button Method In Robot
+#        click element
+#        click button
+#        click element at coordinates
+#        click image
+#        click link
+#        close window
+#
+#        radio button should be set to
+#        radio button should not be selected
+#        page should contain radio button
+#        page should not contain radio button
+#        select radio button
 
 

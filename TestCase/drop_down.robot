@@ -18,12 +18,14 @@ Handling Drop down and lists
 
 
     
-
+#Drop Down Method In Robot
 #    select from list by value
 #    select from list by label
 #    select all from list
 #    unselect from list by index
 #    unselect from list by value
 #    unselect from list by label
+
+
 
 

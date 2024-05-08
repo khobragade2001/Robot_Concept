@@ -14,3 +14,8 @@ Take Screenshots
     sleep    2
     capture page screenshot     D:/CREDENCE CLASS/AUTOMATION/Robot/ScreenShots/loginpage.png
     capture element screenshot    xpath://img[@title='ParaBank']        D:/CREDENCE CLASS/AUTOMATION/Robot/ScreenShots/logo.png
+
+
+#ScreenShots Method In Robot
+#        capture page screenshot
+#        capture element screenshot
