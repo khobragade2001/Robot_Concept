@@ -4,13 +4,13 @@ Library    SeleniumLibrary
 *** Variables ***
 ${url}      https://fast.com/
 *** Keywords ***
+###                                                      robot TestCase/wait.robot                                 run command
 
 *** Test Cases ***
 Wait Page Handles
     open browser    ${url}      chrome
-    set selenium speed    1 seconds
     maximize browser window
-    wait until element is enabled       xpath://a[@id='show-more-details-link']
+    wait until element contains     xpath://a[@id='show-more-details-link']     show more details
     click element    xpath://a[@id='show-more-details-link']
 #    capture page screenshot
     sleep    3

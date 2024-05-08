@@ -1,45 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-06T16:29:56.314279" rpa="false" schemaversion="5">
-<suite id="s1" name="Tag or Groping testcases" source="D:\CREDENCE CLASS\AUTOMATION\Robot\TestCase\Tag_or_Groping_testcases.robot">
-<test id="s1-t1" name="TC_001" line="4">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>this is test cases 001 and he belongs to sanity catagary</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-06T16:29:56.361589" elapsed="0.000000"/>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-08T10:57:53.336283" rpa="false" schemaversion="5">
+<suite id="s1" name="Wait" source="D:\CREDENCE CLASS\AUTOMATION\Robot\TestCase\wait.robot">
+<test id="s1-t1" name="Wait Page Handles" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-08T10:57:53.738058" level="INFO">Opening browser 'chrome' to base url 'https://fast.com/'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-08T10:57:53.738058" elapsed="3.018566"/>
 </kw>
-<tag>sanity</tag>
-<status status="PASS" start="2024-05-06T16:29:56.359587" elapsed="0.004002"/>
-</test>
-<test id="s1-t2" name="TC_003" line="12">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>this is test cases 003 and he belongs to sanity catagary</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-06T16:29:56.365908" elapsed="0.000539"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-08T10:57:56.757621" elapsed="0.103937"/>
 </kw>
-<tag>sanity</tag>
-<status status="PASS" start="2024-05-06T16:29:56.364901" elapsed="0.002010"/>
-</test>
-<test id="s1-t3" name="TC_004" line="16">
-<kw name="Log To Console" owner="BuiltIn">
-<arg>this is test case 004 and his belongs to ashish catagary</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-05-06T16:29:56.367888" elapsed="0.001143"/>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<msg time="2024-05-08T10:58:02.169856" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-08T10:58:02.169856" level="FAIL">Element 'xpath://a[@id='show-more-details-link']' did not get text 'show more details' in 5 seconds.</msg>
+<arg>xpath://a[@id='show-more-details-link']</arg>
+<arg>show more details</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="FAIL" start="2024-05-08T10:57:56.864556" elapsed="5.309600">Element 'xpath://a[@id='show-more-details-link']' did not get text 'show more details' in 5 seconds.</status>
 </kw>
-<tag>ashish</tag>
-<status status="PASS" start="2024-05-06T16:29:56.367888" elapsed="0.001592"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://a[@id='show-more-details-link']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-08T10:58:02.175509" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-05-08T10:58:02.176179" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-08T10:57:53.736292" elapsed="8.440322">Element 'xpath://a[@id='show-more-details-link']' did not get text 'show more details' in 5 seconds.</status>
 </test>
-<status status="PASS" start="2024-05-06T16:29:56.317280" elapsed="0.053144"/>
+<status status="FAIL" start="2024-05-08T10:57:53.340281" elapsed="8.838334"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">ashish</stat>
-<stat pass="2" fail="0" skip="0">sanity</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Tag or Groping testcases">Tag or Groping testcases</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Wait">Wait</stat>
 </suite>
 </statistics>
 <errors>
