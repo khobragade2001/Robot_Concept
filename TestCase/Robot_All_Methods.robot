@@ -71,5 +71,20 @@ ScreenShots Method In Robot
 Scrolling page Method In Robot
         scroll element into view
 
+Send Keys
+        input text
+
+Browser MEthod In Robot
+    open browser
+    close all browsers
+    close browser
+    switch browser
+    set browser implicit wait
+    maximize browser window
+    get browser aliases
+    get browser ids
+    minimize browser window
+
+
 
 
