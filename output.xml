@@ -1,48 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-08T10:57:53.336283" rpa="false" schemaversion="5">
-<suite id="s1" name="Wait" source="D:\CREDENCE CLASS\AUTOMATION\Robot\TestCase\wait.robot">
-<test id="s1-t1" name="Wait Page Handles" line="10">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-05-16T13:17:34.988491" rpa="false" schemaversion="5">
+<suite id="s1" name="DDT" source="D:\CREDENCE CLASS\AUTOMATION\Robot\TestCase\DDT.robot">
+<kw name="browser open" owner="Login_resource" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-08T10:57:53.738058" level="INFO">Opening browser 'chrome' to base url 'https://fast.com/'.</msg>
+<msg time="2024-05-16T13:17:35.433450" level="INFO">Opening browser 'chrome' to base url 'https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F'.</msg>
 <arg>${url}</arg>
-<arg>chrome</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-08T10:57:53.738058" elapsed="3.018566"/>
+<status status="PASS" start="2024-05-16T13:17:35.432447" elapsed="4.006528"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-05-16T13:17:39.438975" elapsed="0.000999"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-08T10:57:56.757621" elapsed="0.103937"/>
+<status status="PASS" start="2024-05-16T13:17:39.440974" elapsed="1.088944"/>
 </kw>
-<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
-<msg time="2024-05-08T10:58:02.169856" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-08T10:58:02.169856" level="FAIL">Element 'xpath://a[@id='show-more-details-link']' did not get text 'show more details' in 5 seconds.</msg>
-<arg>xpath://a[@id='show-more-details-link']</arg>
-<arg>show more details</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="FAIL" start="2024-05-08T10:57:56.864556" elapsed="5.309600">Element 'xpath://a[@id='show-more-details-link']' did not get text 'show more details' in 5 seconds.</status>
+<status status="PASS" start="2024-05-16T13:17:35.431447" elapsed="5.098471"/>
 </kw>
+<test id="s1-t1" name="Right User Wrong Pass" line="11">
+<kw name="Invalid Login">
+<kw name="Input Username" owner="Login_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:17:40.532931" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T13:17:40.531932" elapsed="3.235170"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-05-16T13:17:40.531932" elapsed="3.235170"/>
+</kw>
+<kw name="Input Passsword" owner="Login_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:17:43.768117" level="INFO">Typing text 'BOSS' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>xpath://input[@id='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-16T13:17:43.768117" elapsed="3.181063"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-05-16T13:17:43.767102" elapsed="3.182078"/>
+</kw>
+<kw name="Click On Login Button" owner="Login_resource">
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>xpath://a[@id='show-more-details-link']</arg>
+<msg time="2024-05-16T13:17:46.950159" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-08T10:58:02.175509" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-16T13:17:46.950159" elapsed="2.500888"/>
+</kw>
+<status status="PASS" start="2024-05-16T13:17:46.949180" elapsed="2.501867"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>3</arg>
+<msg time="2024-05-16T13:17:54.451259" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-05-08T10:58:02.176179" elapsed="0.000000"/>
+<status status="PASS" start="2024-05-16T13:17:49.451047" elapsed="5.000212"/>
 </kw>
-<status status="FAIL" start="2024-05-08T10:57:53.736292" elapsed="8.440322">Element 'xpath://a[@id='show-more-details-link']' did not get text 'show more details' in 5 seconds.</status>
+<kw name="Error Message Show" owner="Login_resource">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:17:56.482154" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-05-16T13:17:54.452275" elapsed="2.029879"/>
+</kw>
+<status status="PASS" start="2024-05-16T13:17:54.451259" elapsed="2.030895"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-16T13:17:56.482154" elapsed="3.356093"/>
+</kw>
+<arg>admin@yourstore.com</arg>
+<arg>BOSS</arg>
+<status status="PASS" start="2024-05-16T13:17:40.530934" elapsed="19.307313"/>
+</kw>
+<status status="PASS" start="2024-05-16T13:17:40.529918" elapsed="19.310456"/>
 </test>
-<status status="FAIL" start="2024-05-08T10:57:53.340281" elapsed="8.838334"/>
+<test id="s1-t2" name="Wrong User Right Pass" line="13">
+<kw name="Invalid Login">
+<kw name="Input Username" owner="Login_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:17:59.851314" level="INFO">Typing text 'admin@yourstore.co' into text field 'xpath://input[@id='Email']'.</msg>
+<msg time="2024-05-16T13:17:59.851314" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-05-16T13:17:59.853313" level="FAIL">No browser is open.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-16T13:17:59.850314" elapsed="0.007992">No browser is open.</status>
+</kw>
+<arg>${username}</arg>
+<status status="FAIL" start="2024-05-16T13:17:59.849315" elapsed="0.009991">No browser is open.</status>
+</kw>
+<kw name="Input Passsword" owner="Login_resource">
+<arg>${password}</arg>
+<status status="NOT RUN" start="2024-05-16T13:17:59.859306" elapsed="0.000000"/>
+</kw>
+<kw name="Click On Login Button" owner="Login_resource">
+<status status="NOT RUN" start="2024-05-16T13:17:59.859306" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-05-16T13:17:59.859306" elapsed="0.000000"/>
+</kw>
+<kw name="Error Message Show" owner="Login_resource">
+<status status="NOT RUN" start="2024-05-16T13:17:59.860305" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-05-16T13:17:59.860305" elapsed="0.000000"/>
+</kw>
+<arg>admin@yourstore.co</arg>
+<arg>admin</arg>
+<status status="FAIL" start="2024-05-16T13:17:59.847306" elapsed="0.012999">No browser is open.</status>
+</kw>
+<status status="FAIL" start="2024-05-16T13:17:59.845541" elapsed="0.015795">No browser is open.</status>
+</test>
+<test id="s1-t3" name="Wrong User Wrong Pass" line="15">
+<kw name="Invalid Login">
+<kw name="Input Username" owner="Login_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:17:59.865157" level="INFO">Typing text 'admin@yourstore.co' into text field 'xpath://input[@id='Email']'.</msg>
+<msg time="2024-05-16T13:17:59.865157" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-05-16T13:17:59.865157" level="FAIL">No browser is open.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-16T13:17:59.865157" elapsed="0.001999">No browser is open.</status>
+</kw>
+<arg>${username}</arg>
+<status status="FAIL" start="2024-05-16T13:17:59.864155" elapsed="0.003001">No browser is open.</status>
+</kw>
+<kw name="Input Passsword" owner="Login_resource">
+<arg>${password}</arg>
+<status status="NOT RUN" start="2024-05-16T13:17:59.867156" elapsed="0.000000"/>
+</kw>
+<kw name="Click On Login Button" owner="Login_resource">
+<status status="NOT RUN" start="2024-05-16T13:17:59.868155" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-05-16T13:17:59.868155" elapsed="0.000000"/>
+</kw>
+<kw name="Error Message Show" owner="Login_resource">
+<status status="NOT RUN" start="2024-05-16T13:17:59.868155" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-05-16T13:17:59.868155" elapsed="0.000000"/>
+</kw>
+<arg>admin@yourstore.co</arg>
+<arg>BOSS</arg>
+<status status="FAIL" start="2024-05-16T13:17:59.864155" elapsed="0.004000">No browser is open.</status>
+</kw>
+<status status="FAIL" start="2024-05-16T13:17:59.862822" elapsed="0.006332">No browser is open.</status>
+</test>
+<test id="s1-t4" name="Right User Empty Pass" line="17">
+<kw name="Invalid Login">
+<kw name="Input Username" owner="Login_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:17:59.874152" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<msg time="2024-05-16T13:17:59.874152" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-05-16T13:17:59.874152" level="FAIL">No browser is open.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-16T13:17:59.873153" elapsed="0.003001">No browser is open.</status>
+</kw>
+<arg>${username}</arg>
+<status status="FAIL" start="2024-05-16T13:17:59.873153" elapsed="0.003001">No browser is open.</status>
+</kw>
+<kw name="Input Passsword" owner="Login_resource">
+<arg>${password}</arg>
+<status status="NOT RUN" start="2024-05-16T13:17:59.877151" elapsed="0.000000"/>
+</kw>
+<kw name="Click On Login Button" owner="Login_resource">
+<status status="NOT RUN" start="2024-05-16T13:17:59.877151" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-05-16T13:17:59.877151" elapsed="0.000000"/>
+</kw>
+<kw name="Error Message Show" owner="Login_resource">
+<status status="NOT RUN" start="2024-05-16T13:17:59.877151" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-05-16T13:17:59.878149" elapsed="0.000000"/>
+</kw>
+<arg>admin@yourstore.com</arg>
+<arg>${EMPTY}</arg>
+<status status="FAIL" start="2024-05-16T13:17:59.872154" elapsed="0.005995">No browser is open.</status>
+</kw>
+<status status="FAIL" start="2024-05-16T13:17:59.871158" elapsed="0.007753">No browser is open.</status>
+</test>
+<test id="s1-t5" name="Empty User Right Pass" line="19">
+<kw name="Invalid Login">
+<kw name="Input Username" owner="Login_resource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-16T13:17:59.884406" level="INFO">Typing text '' into text field 'xpath://input[@id='Email']'.</msg>
+<msg time="2024-05-16T13:17:59.884406" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-05-16T13:17:59.884406" level="FAIL">No browser is open.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-16T13:17:59.883408" elapsed="0.002996">No browser is open.</status>
+</kw>
+<arg>${username}</arg>
+<status status="FAIL" start="2024-05-16T13:17:59.883408" elapsed="0.002996">No browser is open.</status>
+</kw>
+<kw name="Input Passsword" owner="Login_resource">
+<arg>${password}</arg>
+<status status="NOT RUN" start="2024-05-16T13:17:59.886404" elapsed="0.001000"/>
+</kw>
+<kw name="Click On Login Button" owner="Login_resource">
+<status status="NOT RUN" start="2024-05-16T13:17:59.887404" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-05-16T13:17:59.887404" elapsed="0.000000"/>
+</kw>
+<kw name="Error Message Show" owner="Login_resource">
+<status status="NOT RUN" start="2024-05-16T13:17:59.887404" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-05-16T13:17:59.887404" elapsed="0.000000"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>admin</arg>
+<status status="FAIL" start="2024-05-16T13:17:59.881404" elapsed="0.006999">No browser is open.</status>
+</kw>
+<status status="FAIL" start="2024-05-16T13:17:59.880765" elapsed="0.008179">No browser is open.</status>
+</test>
+<kw name="browser close" owner="Login_resource" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-05-16T13:17:59.891142" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-16T13:17:59.891142" elapsed="0.001000"/>
+</kw>
+<status status="FAIL" start="2024-05-16T13:17:34.991493" elapsed="24.900649"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Wait">Wait</stat>
+<stat pass="1" fail="4" skip="0" id="s1" name="DDT">DDT</stat>
 </suite>
 </statistics>
 <errors>

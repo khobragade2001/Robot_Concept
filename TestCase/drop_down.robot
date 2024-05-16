@@ -14,7 +14,7 @@ Handling Drop down and lists
     select from list by index       dropdown-class-example     2
     sleep   3
     close browser
-    open browser
+    
 
 
     

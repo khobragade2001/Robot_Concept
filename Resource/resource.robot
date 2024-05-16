@@ -1,6 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+*** Variables ***
+${app url}          https://admin-demo.nopcommerce.com/
+${browser}      chrome
 
 
 *** Keywords ***

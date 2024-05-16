@@ -1,8 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-Suite Setup     log to console      ** @@ this massage SHOW only  when test cases start..........................
-Suite Teardown    log to console      ** @@ this massage SHOW only  when test cases END
+Suite Setup     log to console      ** @@ this massage SHOW only when before test cases start..........................
+Suite Teardown    log to console      ** @@ this massage SHOW only when after test cases END
 Test Setup    log to console      $$$$$$ this massage SHOW when every test case start
 Test Teardown    log to console      $$$$$$ this massage SHOW when every test case END.......................
 

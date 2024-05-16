@@ -8,7 +8,7 @@ ${url}      https://vinothqaacademy.com/alertandpopup/
 Alert Handles
     
     open browser    ${url}      chrome
-    set selenium speed    1
+    set selenium speed	  1
     maximize browser window
     
     ### simple alert
@@ -24,6 +24,7 @@ Alert Handles
     ## prompt Alerts
     click element    xpath://button[@name='promptalertbox1234']
     input text into alert    AShish
+    sleep    3
 
 #Alert Methods In Robot
 #        alert should be present
