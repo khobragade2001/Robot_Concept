@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${url}      https://fast.com/
+${url}      https://www.hyrtutorials.com/p/waits-demo.html
 *** Keywords ***
 ###                                                      robot TestCase/wait.robot                                 run command
 
@@ -10,10 +10,13 @@ ${url}      https://fast.com/
 Wait Page Handles
     open browser    ${url}      chrome
     maximize browser window
-    wait until element contains     xpath://a[@id='show-more-details-link']     show more details
-    click element    xpath://a[@id='show-more-details-link']
-#    capture page screenshot
-    sleep    3
+    click element     xpath://button[@id='btn1']
+
+    wait until page contains element    xpath://h3[normalize-space()='Show the textboxes here:']//input[@id='txt1']
+    input text   xpath: //h3[normalize-space()='Show the textboxes here:']//input[@id='txt1']       Hello World
+    capture page screenshot     D:\CREDENCE CLASS\AUTOMATION\Robot\ScreenShots\wait.png
+    sleep    1
+
 #
 #Wait Methods In Robot
 
