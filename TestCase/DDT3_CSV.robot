@@ -19,5 +19,5 @@ Invalid Login
 
 
 *** Test Cases ***
-Login_test_with_excel       ${username}     ${password}
+Login_test_with_CSV_File       ${username}     ${password}
 

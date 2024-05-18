@@ -9,7 +9,6 @@ ${browser}      chrome
 *** Keywords ***
 browser open
     open browser    ${url}      ${browser}
-    set selenium speed    1
     maximize browser window
 
 browser close
